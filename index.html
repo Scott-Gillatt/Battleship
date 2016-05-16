@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BattleShip</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1><strong>Battleship</strong></h1>
+        </div>
+        <div class="alert alert-info">Ready!</div>
+        <div class="row">
+
+            <!--Players Panel-->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading ship-header">
+                        <h2>Player</h2>
+
+                        <form class="form-inline pull-right">
+                            <div class="form-group">
+                                <label for="Target">Target</label>
+                                <input type="text" class="form-control" id="Target" placeholder="C3">
+                                <button type="submit" class="btn btn-danger">Fire</button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                    <div class="panel-body ship-background">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="btn-group-vertical ships" role="group">
+                                    <br><br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
+                                    <br>
+                                    <br><i class="fa fa-circle" aria-hidden="true"></i> Battleship
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Cruiser
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Submarine
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Patrol
+                                </div>
+                            </div>
+                            <div class="col-md-9 border">
+                                <div class="grid">
+                                    <!--Player Title Row-->
+                                    <div class="id gridCell">&nbsp</div>
+                                    <div class="id gridCell">1</div>
+                                    <div class="id gridCell">2</div>
+                                    <div class="id gridCell">3</div>
+                                    <div class="id gridCell">4</div>
+                                    <div class="id gridCell">5</div>
+                                    <div class="id gridCell">6</div>
+                                    <div class="id gridCell">7</div>
+                                    <div class="id gridCell">8</div>
+                                    <div class="id gridCell">9</div>
+                                    <div class="id gridCell">10</div>
+                                    <!--Player A Row-->
+                                    <div class="id gridCell">A</div>
+                                    <div id="pa1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pa10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player B Row-->
+                                    <div class="id gridCell">B</div>
+                                    <div id="pb1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pb10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player C Row-->
+                                    <div class="id gridCell">C</div>
+                                    <div id="pc1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pc10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player D row-->
+                                    <div class="id gridCell">D</div>
+                                    <div id="pd1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pd10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player E Row-->
+                                    <div class="id gridCell">E</div>
+                                    <div id="pe1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pe10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player F Row-->
+                                    <div class="id gridCell">F</div>
+                                    <div id="pf1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pf10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player G Row-->
+                                    <div class="id gridCell">G</div>
+                                    <div id="pg1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pg10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player H Row-->
+                                    <div class="id gridCell">H</div>
+                                    <div id="ph1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ph10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player I Row-->
+                                    <div class="id gridCell">I</div>
+                                    <div id="pi1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pi10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Player J Row-->
+                                    <div class="id gridCell">J</div>
+                                    <div id="pj1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="pj10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                </div>
+                                <!--End of Player Grid-->
+                            </div>
+                            <!--End of Player Panel-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Computers Panel-->
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading ship-header">
+                        <h2>Computer</h2>
+                    </div>
+                    <div class="panel-body ship-background">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="btn-group-vertical ships" role="group">
+                                    <br><br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
+                                    <br>
+                                    <br><i class="fa fa-circle" aria-hidden="true"></i> Battleship
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Cruiser
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Submarine
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Patrol
+                                </div>
+                            </div>
+                            <div class="col-md-9 border">
+                                <div class="grid">
+                                    <!--Computer Title Row-->
+                                    <div class="id gridCell">&nbsp</div>
+                                    <div class="id gridCell">1</div>
+                                    <div class="id gridCell">2</div>
+                                    <div class="id gridCell">3</div>
+                                    <div class="id gridCell">4</div>
+                                    <div class="id gridCell">5</div>
+                                    <div class="id gridCell">6</div>
+                                    <div class="id gridCell">7</div>
+                                    <div class="id gridCell">8</div>
+                                    <div class="id gridCell">9</div>
+                                    <div class="id gridCell">10</div>
+                                    <!--Computer A Row-->
+                                    <div class="id gridCell">A</div>
+                                    <div id="ca1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ca10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer B Row-->
+                                    <div class="id gridCell">B</div>
+                                    <div id="cb1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cb10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer C Row-->
+                                    <div class="id gridCell">C</div>
+                                    <div id="cc1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cc10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer D row-->
+                                    <div class="id gridCell">D</div>
+                                    <div id="cd1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cd10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer E Row-->
+                                    <div class="id gridCell">E</div>
+                                    <div id="ce1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ce10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer F Row-->
+                                    <div class="id gridCell">F</div>
+                                    <div id="cf1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cf10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer G Row-->
+                                    <div class="id gridCell">G</div>
+                                    <div id="cg1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cg10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer H Row-->
+                                    <div class="id gridCell">H</div>
+                                    <div id="ch1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ch10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer I Row-->
+                                    <div class="id gridCell">I</div>
+                                    <div id="ci1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="ci10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--Computer J Row-->
+                                    <div class="id gridCell">J</div>
+                                    <div id="cj1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj3" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj4" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj5" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj6" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj7" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <div id="cj10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                </div>
+                                <!--End of Computer Grid-->
+                            </div>
+                            <!--End of Computer Panel-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

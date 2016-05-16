@@ -1,0 +1,41 @@
+body{
+    background: url("https://files.slack.com/files-tmb/T17DXRGDN-F18HQ3NF6-b07bc5d245/water_720.png") no-repeat center center fixed;
+    background-size: cover;
+}
+.ship-background{
+    background-color: darkcyan;
+}
+.panel-default>.panel-heading{
+    background-color: black;
+    color: white
+}
+.border{
+    border: 1px black solid;
+    margin: inherit;
+}
+.ship-header h2{
+    font-weight: bolder;
+    width: 20%;
+}
+.ships{
+    color: white;
+    font-weight: bolder;
+}
+.form-inline .form-control{
+    width: 50px;
+}
+.form-inline .form-group{
+    margin-top: -75px;
+    
+}
+.gridCell{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    font-weight: bolder;
+}
+.id{
+    color: white;
+    font-weight: bold
+}
