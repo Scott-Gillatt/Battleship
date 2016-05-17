@@ -11,24 +11,25 @@
 
 <body>
     <div class="container">
+        <!--container-responsive is the other type to use-->
         <div class="page-header">
             <h1><strong>Battleship</strong></h1>
         </div>
-        <div class="alert alert-info">Ready!</div>
+        <div id="alert" class="alert alert-info"><span id="alert-message">Ready!</span></div>
+        
+        
         <div class="row">
-
             <!--Players Panel-->
             <div class="col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading ship-header">
                         <h2>Player</h2>
-
                         <form class="form-inline pull-right">
                             <div class="form-group">
-                                <label for="Target">Target</label>
-                                <input type="text" class="form-control" id="Target" placeholder="C3">
-                                <button type="submit" class="btn btn-danger">Fire</button>
+                                <label for="target">Target</label>
+                                <input type="text" class="form-control" id="target" placeholder="C3">
                             </div>
+                                <button type="submit" class="btn btn-danger">Fire!</button>
                         </form>
 
                     </div>
@@ -37,16 +38,22 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="btn-group-vertical ships" role="group">
-                                    <br><br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
+                                    <!--How Tom did his one-->
+                                    <!--<div>
+                                        <span id="player-carrier-status"><i class="fa fa-circle" aria-hidden="true"></i>Carrier</span>
+                                    </div>-->
+                                    
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
                                     <br>
                                     <br><i class="fa fa-circle" aria-hidden="true"></i> Battleship
-                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Cruiser
+                                    <br> <br><i class="fa fa-circle" aria-hidden="true"></i> Cruiser
                                     <br><br><i class="fa fa-circle" aria-hidden="true"></i> Submarine
                                     <br><br><i class="fa fa-circle" aria-hidden="true"></i> Patrol
                                 </div>
                             </div>
                             <div class="col-md-9 border">
                                 <div class="grid">
+                                    <!--<div class="titleRow">-->
                                     <!--Player Title Row-->
                                     <div class="id gridCell">&nbsp</div>
                                     <div class="id gridCell">1</div>
@@ -59,7 +66,9 @@
                                     <div class="id gridCell">8</div>
                                     <div class="id gridCell">9</div>
                                     <div class="id gridCell">10</div>
+                                    <!--</div>-->
                                     <!--Player A Row-->
+                                    <!--<div class="titleRow">-->
                                     <div class="id gridCell">A</div>
                                     <div id="pa1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
                                     <div id="pa2" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
@@ -71,6 +80,7 @@
                                     <div id="pa8" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
                                     <div id="pa9" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
                                     <div id="pa10" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
+                                    <!--</div>-->
                                     <!--Player B Row-->
                                     <div class="id gridCell">B</div>
                                     <div id="pb1" class="gridCell"> <i class="fa fa-circle-o" aria-hidden="true"></i></div>
@@ -199,7 +209,7 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <div class="btn-group-vertical ships" role="group">
-                                    <br><br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
+                                    <br><br><i class="fa fa-circle" aria-hidden="true"></i> Carrier
                                     <br>
                                     <br><i class="fa fa-circle" aria-hidden="true"></i> Battleship
                                     <br><br><i class="fa fa-circle" aria-hidden="true"></i> Cruiser

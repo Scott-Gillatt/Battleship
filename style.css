@@ -30,12 +30,15 @@ body{
 }
 .gridCell{
     display: inline-block;
+    text-align: center;
     width: 30px;
     height: 30px;
     margin: auto;
-    font-weight: bolder;
 }
 .id{
     color: white;
     font-weight: bold
+}
+.grid{
+    min-width: 390px;
 }
